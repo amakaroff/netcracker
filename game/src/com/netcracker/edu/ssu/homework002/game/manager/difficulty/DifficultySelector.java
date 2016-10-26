@@ -16,6 +16,10 @@ public class DifficultySelector {
 
     private static View view = BeanHolder.VIEW_INSTANCE.getBean();
 
+    public static final int easyRight = 30;
+    public static final int mediumRight = 60;
+    public static final int hardRight = 100;
+
     private DifficultySelector() {
     }
 
@@ -28,13 +32,13 @@ public class DifficultySelector {
 
         switch (difficulty) {
             case 1:
-                Config.setRight(30);
+                Config.setRight(easyRight);
                 break;
             case 2:
-                Config.setRight(60);
+                Config.setRight(mediumRight);
                 break;
             case 3:
-                Config.setRight(100);
+                Config.setRight(hardRight);
                 break;
             case 4:
                 view.print(Messages.ENTER_RANGE, true);
@@ -46,15 +50,17 @@ public class DifficultySelector {
     }
 
     private static void selectRange() {
-        String[] range = new String[8]; // any length, except two
+        String[] range;
 
-        while (Config.getRight() < Config.getLeft() || range.length != 2) {
+        while (Config.getRight() < Config.getLeft() || Config.getRight() - Config.getLeft() < easyRight - 1) {
             try {
                 range = view.read().split(" ");
-                Config.setLeft(Integer.parseInt(range[0]));
-                Config.setRight(Integer.parseInt(range[1]));
+                if (range.length == 2) {
+                    Config.setLeft(Integer.parseInt(range[0]));
+                    Config.setRight(Integer.parseInt(range[1]));
+                }
 
-                if (Config.getRight() < Config.getLeft() || range.length != 2) {
+                if (Config.getRight() < Config.getLeft() || Config.getRight() - Config.getLeft() < easyRight - 1) {
                     throw new IllegalArgumentException();
                 }
             } catch (NumberFormatException exception) {

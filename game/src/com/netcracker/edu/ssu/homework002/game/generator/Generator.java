@@ -56,14 +56,14 @@ public class Generator {
         wrongNumberMessages.add(Messages.WRONG_NUMBER_4);
         wrongNumberMessages.add(Messages.WRONG_NUMBER_5);
 
-        trueHints = new ArrayList<>();
+        trueHints = new ArrayList<String>();
         trueHints.add(Messages.TRUE_HINT_1);
         trueHints.add(Messages.TRUE_HINT_2);
         trueHints.add(Messages.TRUE_HINT_3);
         trueHints.add(Messages.TRUE_HINT_4);
         trueHints.add(Messages.TRUE_HINT_5);
 
-        falseHints = new ArrayList<>();
+        falseHints = new ArrayList<String>();
         falseHints.add(Messages.FALSE_HINT_1);
         falseHints.add(Messages.FALSE_HINT_2);
         falseHints.add(Messages.FALSE_HINT_3);
@@ -130,11 +130,7 @@ public class Generator {
         int length = (Config.getRight() - Config.getLeft() + 1) / 3;
         int count = Config.getCount();
 
-        if (getRandomNumber(0, length) > count) {
-            return false;
-        } else {
-            return true;
-        }
+        return getRandomNumber(0, length) <= count;
     }
 
     public static String generateHint() {

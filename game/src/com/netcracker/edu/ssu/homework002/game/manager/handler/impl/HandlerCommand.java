@@ -40,10 +40,12 @@ public class HandlerCommand implements Handler {
     }
 
     public boolean handle(String command) {
+        if (command != null)
+            command = command.toLowerCase();
         if (commands.containsKey(command)) {
             switch (commands.get(command)) {
                 case 1:
-                    view.print(Messages.YOU_POINTS + Config.getPoints(), true);
+                    view.print(String.format(Messages.YOU_POINTS, Config.getPoints(), Config.getMaxPoints()), true);
                     break;
                 case 2:
                     if (Config.isUsedNumbersEmpty()) {
@@ -63,6 +65,7 @@ public class HandlerCommand implements Handler {
                     view.print(Generator.generateHint(), true);
                     break;
                 case 5:
+                    view.print(Generator.generateLoseSentence(), true);
                     return false;
             }
             return true;

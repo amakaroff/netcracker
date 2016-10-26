@@ -37,6 +37,7 @@ public class Game {
             boolean isComplete = true;
 
             Config.setPoints((Config.getRight() - Config.getLeft() + 1) * 10);
+            Config.setMaxPoints(Config.getPoints());
             Config.setWinNumber(Generator.getRandomNumber(Config.getLeft(), Config.getRight()));
 
             while (isComplete) {

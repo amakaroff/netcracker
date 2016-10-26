@@ -2,6 +2,7 @@ package com.netcracker.edu.ssu.homework002.game.bean;
 
 import com.netcracker.edu.ssu.homework002.game.manager.handler.impl.HandlerCommand;
 import com.netcracker.edu.ssu.homework002.game.manager.handler.impl.HandlerNumbers;
+import com.netcracker.edu.ssu.homework002.game.view.api.View;
 import com.netcracker.edu.ssu.homework002.game.view.impl.ConsoleView;
 
 /**

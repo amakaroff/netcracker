@@ -37,7 +37,7 @@ public class Messages {
 
     public static final String EMPTY_ENTER = "Вы ничего не вводили.";
 
-    public static final String YOU_POINTS = "Твои очки: ";
+    public static final String YOU_POINTS = "Твои очки: %d / %d";
 
     public static final String WRONG_ENTER = "Неверный ввод. Попробуйте снова: ";
 
@@ -74,21 +74,20 @@ public class Messages {
     public static final String LOSE_MESSAGE_4 = "Когда нибудь ты победишь меня, но точно не сегодня.";
     public static final String LOSE_MESSAGE_5 = "Даже моя бабушка могла бы отгадать его, а она была IBM5100!";
 
+    public static final String PATTERN_HINT = "%s, чем %d";
 
-    public static final String PATTERN_HINT = "%1$s, чем %2$d";
-
-    public static final String TRUE_HINT_1 = "Поверь мне, это число точно %1$s.";
-    public static final String TRUE_HINT_2 = "База данных утекла, это число %1$s.";
-    public static final String TRUE_HINT_3 = "Вероятность того, что число %1$s равна 146%.";
-    public static final String TRUE_HINT_4 = "if (true) then number %1$s";
-    public static final String TRUE_HINT_5 = "У меня сегодня хорошее настроение поэтому я скажу что загаданное число %1$s.";
+    public static final String TRUE_HINT_1 = "Поверь мне, это число точно %s.";
+    public static final String TRUE_HINT_2 = "База данных утекла, это число %s.";
+    public static final String TRUE_HINT_3 = "Вероятность того, что число %s равна 146%%.";
+    public static final String TRUE_HINT_4 = "if (true) then number %s";
+    public static final String TRUE_HINT_5 = "У меня сегодня хорошее настроение поэтому я скажу что загаданное число %s.";
 
 
-    public static final String FALSE_HINT_1 = "Хм, я думаю оно чуть %1$s.";
-    public static final String FALSE_HINT_2 = "Как думаешь, оно %1$s?";
-    public static final String FALSE_HINT_3 = "Шар судьбы предсказывает, что загаданное число %1$s.";
-    public static final String FALSE_HINT_4 = "Незнаю быть или не быть, но число точно не %1$s.";
-    public static final String FALSE_HINT_5 = "Мне тут подсказывают, что число %1$s.";
+    public static final String FALSE_HINT_1 = "Хм, я думаю оно чуть %s.";
+    public static final String FALSE_HINT_2 = "Как думаешь, оно %s?";
+    public static final String FALSE_HINT_3 = "Шар судьбы предсказывает, что загаданное число %s.";
+    public static final String FALSE_HINT_4 = "Незнаю быть или не быть, но число точно не %s.";
+    public static final String FALSE_HINT_5 = "Мне тут подсказывают, что число %s.";
 
 
     public static final String REPEAT_SELECT_NUMBER_1 = "Я думаю ты уже выбирал это число, ну да ладно.";

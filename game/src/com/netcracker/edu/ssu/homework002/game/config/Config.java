@@ -2,7 +2,6 @@ package com.netcracker.edu.ssu.homework002.game.config;
 
 import com.netcracker.edu.ssu.homework002.game.manager.difficulty.DifficultySelector;
 
-import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -19,6 +18,15 @@ public class Config {
     private static int count = 0;
 
     private static int points = 0;
+    private static int maxPoints = 0;
+
+    public static int getMaxPoints() {
+        return maxPoints;
+    }
+
+    public static void setMaxPoints(int maxPoints) {
+        Config.maxPoints = maxPoints;
+    }
 
     private static Set<Integer> usedNumbers = new TreeSet<Integer>();
 
@@ -75,7 +83,7 @@ public class Config {
     }
 
     public static Set<Integer> getUsedNumbers() {
-        return new HashSet<>(usedNumbers);
+        return new TreeSet<>(usedNumbers);
     }
 
     public static void resetAll() {
@@ -83,6 +91,7 @@ public class Config {
         right = 1;
         count = 0;
         points = 0;
+        maxPoints = 0;
 
         DifficultySelector.setDifficulty(-1);
 
